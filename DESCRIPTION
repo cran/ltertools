@@ -1,24 +1,24 @@
 Package: ltertools
 Type: Package
 Title: Tools Developed by the Long Term Ecological Research Community
-Version: 1.0.0
+Version: 1.1.0
+Date: 2024-09-20
 Authors@R: c(
-    person(given = "Nicholas", 
-         family = "Lyon",
-         role = c("aut", "cre"),
-         email = "lyon@nceas.ucsb.edu",
-         comment = c(ORCID = "0000-0003-3905-1078",
-                     Website = "https://njlyon0.github.io/")),
+    person(given = "Nicholas", family = "Lyon",
+          role = c("aut", "cre"),
+          email = "lyon@nceas.ucsb.edu",
+          comment = "https://njlyon0.github.io/"),
     person(given = "Angel", family = "Chen",
-         email = "anchen@nceas.ucsb.edu",
-         comment = c(ORCID = "0000-0003-3515-6710",
-                     Website = "angelchen7.github.io"),
-         role = c("aut")),
+          role = c("aut"),
+          email = "anchen@nceas.ucsb.edu",
+          comment = "https://angelchen7.github.io"),
+    person(given = "Miguel C.", family = "Leon",
+           role = c("ctb"),
+           comment = "https://luquillo.lter.network/"),
     person(family = "National Science Foundation",
-         role = "fnd",
-         comment = "NSF 1929393, 09/01/2019 - 08/31/2024"),
-    person(family = "University of California, Santa Barbara",
-         role = "cph") )
+           role = "fnd",
+           comment = "NSF 1929393, 09/01/2019 - 08/31/2024"),
+    person(family = "University of California, Santa Barbara", role = "cph") )
 Maintainer: Nicholas Lyon <lyon@nceas.ucsb.edu>
 Description: Set of the data science tools created by various members of the Long Term 
     Ecological Research (LTER) community. These functions were initially written largely 
@@ -29,20 +29,20 @@ Language: en-US
 LazyData: true
 URL: https://lter.github.io/ltertools/
 BugReports: https://github.com/lter/ltertools/issues
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Depends: R (>= 3.5)
-Imports: dplyr, generics, ggplot2, magrittr, purrr, readxl, rlang,
+Imports: dplyr, generics, ggplot2, magrittr, purrr, readxl, RJSONIO,
         stats, stringr, tidyr, utils
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-02-22 14:42:42 UTC; lyon
-Author: Nicholas Lyon [aut, cre] (<https://orcid.org/0000-0003-3905-1078>,
-    https://njlyon0.github.io/),
-  Angel Chen [aut] (<https://orcid.org/0000-0003-3515-6710>,
-    angelchen7.github.io),
+Packaged: 2024-09-20 21:38:19 UTC; lyon
+Author: Nicholas Lyon [aut, cre] (https://njlyon0.github.io/),
+  Angel Chen [aut] (https://angelchen7.github.io),
+  Miguel C. Leon [ctb] (https://luquillo.lter.network/),
   National Science Foundation [fnd] (NSF 1929393, 09/01/2019 -
     08/31/2024),
   University of California, Santa Barbara [cph]
 Repository: CRAN
-Date/Publication: 2024-02-23 19:00:02 UTC
+Date/Publication: 2024-09-20 21:50:08 UTC

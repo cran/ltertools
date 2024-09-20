@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/lter/ltertools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lter/ltertools/actions/workflows/R-CMD-check.yaml)
+[![](https://cranlogs.r-pkg.org/badges/ltertools)](https://cran.r-project.org/package=ltertools)
 ![GitHub
 issues](https://img.shields.io/github/issues-raw/lter/ltertools)
 ![GitHub pull
@@ -42,6 +43,12 @@ devtools::install_github("lter/ltertools")
 As functions are added to the package they will be briefly summarized
 below and attributed to their author(s)
 
+### Reproducibility
+
+- **`make_json`** – creates a JSON containing name/value pairs from a
+  named vector. If desired, can also add the created JSON’s filename to
+  the .gitignore (if one exists in the working directory)
+
 ### Harmonization
 
 - **`begin_key`** – creates the first two columns of a ‘column key’
@@ -58,6 +65,11 @@ below and attributed to their author(s)
   folder and stores them as elements in a list. List element names are
   the respective file names. Currently supports CSV, TXT, XLS, and XLSX
   file formats
+
+- **`solar_day_info`** – Identify sunrise, sunset, solar noon, and day
+  length for all dates within a user-specified range at particular
+  coordinates. Function concept contributed by [Miguel C.
+  Leon](https://luquillo.lter.network/)
 
 - **`cv`** – Calculate coefficient of variation (CV) from a vector of
   numbers
