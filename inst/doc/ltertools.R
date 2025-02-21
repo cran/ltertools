@@ -22,7 +22,7 @@ make_json(x = my_info, file = file.path(temp_folder, "user.json"))
 (user_info <- RJSONIO::fromJSON(content = file.path(temp_folder, "user.json")))
 
 ## ----make-json-2--------------------------------------------------------------
-#  df <- read.csv(file = file.path(user_info$data_path, "data_2024.csv"))
+# df <- read.csv(file = file.path(user_info$data_path, "data_2024.csv"))
 
 ## ----harmony-prep-1-----------------------------------------------------------
 # Generate two simple tables
@@ -55,11 +55,11 @@ key_obj
 
 ## ----harmonize----------------------------------------------------------------
 # Use the key to harmonize our example data
-harmony_df <- ltertools::harmonize(key = key_obj, raw_folder = temp_folder, 
-                                   data_format = "csv", quiet = TRUE)
+harmony <- ltertools::harmonize(key = key_obj, raw_folder = temp_folder, 
+                                data_format = "csv", quiet = TRUE)
 
 # Check the structure of that
-utils::str(harmony_df)
+utils::str(harmony)
 
 ## ----begin-key----------------------------------------------------------------
 # Generate a column key with "guesses" at tidy column names
@@ -69,8 +69,20 @@ test_key <- ltertools::begin_key(raw_folder = temp_folder, data_format = "csv",
 # Examine what that generated
 test_key
 
+## ----expand-key---------------------------------------------------------------
+# Make another simple 'raw' file
+df3 <- data.frame("xx" = c(10:15),
+                  "letters" = letters[10:15])
+
+# Export this locally to the temp folder too
+utils::write.csv(x = df3, file = file.path(temp_folder, "df3.csv"), row.names = FALSE)
+
+# Identify what needs to be added to the existing column key
+ltertools::expand_key(key = key_obj, raw_folder = temp_folder, harmonized_df = harmony,
+                      data_format = "csv", guess_tidy = TRUE)
+
 ## ----read---------------------------------------------------------------------
-# Read in all (both) of the CSVs that we created above
+# Read in all of the CSVs that we created above
 data_list <- ltertools::read(raw_folder = temp_folder, data_format = "csv")
 
 # Check the structure of that

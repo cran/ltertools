@@ -1,3 +1,9 @@
+## ltertools Version 1.2.0
+
+There are no ERRORs, WARNINGs, or NOTEs returned by `devtools::check()`.
+
+- New function: `expand_key` generates rows for a column key for only raw data files that are not already in an existing key or in an existing harmonized data table
+
 ## ltertools Version 1.1.0
 
 There are no ERRORs, WARNINGs, or NOTEs returned by `devtools::check()`.
