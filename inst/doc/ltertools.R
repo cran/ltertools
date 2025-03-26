@@ -8,22 +8,6 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 # devtools::install_github("lter/ltertools")
 library(ltertools)
 
-## ----make-json-1--------------------------------------------------------------
-# Create user-specific information
-my_info <- c("data_path" = "Users/me/dropbox/big-data-project/data")
-
-# Generate a local folder for exporting
-temp_folder <- tempdir()
-
-# Create a JSON with those contents
-make_json(x = my_info, file = file.path(temp_folder, "user.json"))
-
-# Read it back in
-(user_info <- RJSONIO::fromJSON(content = file.path(temp_folder, "user.json")))
-
-## ----make-json-2--------------------------------------------------------------
-# df <- read.csv(file = file.path(user_info$data_path, "data_2024.csv"))
-
 ## ----harmony-prep-1-----------------------------------------------------------
 # Generate two simple tables
 ## Dataframe 1

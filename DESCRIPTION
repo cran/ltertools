@@ -1,8 +1,8 @@
 Package: ltertools
 Type: Package
 Title: Tools Developed by the Long Term Ecological Research Community
-Version: 1.2.0
-Date: 2025-02-21
+Version: 2.0.0
+Date: 2025-03-26
 Authors@R: c(
     person(given = "Nicholas", family = "Lyon",
           role = c("aut", "cre"),
@@ -31,13 +31,13 @@ URL: https://lter.github.io/ltertools/
 BugReports: https://github.com/lter/ltertools/issues
 RoxygenNote: 7.3.1
 Depends: R (>= 3.5)
-Imports: dplyr, generics, ggplot2, magrittr, purrr, readxl, RJSONIO,
-        stats, stringr, tidyr, utils
+Imports: dplyr, generics, ggplot2, magrittr, purrr, readxl, stats,
+        stringr, supportR, tidyr, utils
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-02-21 15:25:23 UTC; lyon
+Packaged: 2025-03-26 18:14:42 UTC; lyon
 Author: Nicholas Lyon [aut, cre] (https://njlyon0.github.io/),
   Angel Chen [aut] (https://angelchen7.github.io),
   Miguel C. Leon [ctb] (https://luquillo.lter.network/),
@@ -45,4 +45,4 @@ Author: Nicholas Lyon [aut, cre] (https://njlyon0.github.io/),
     08/31/2024),
   University of California, Santa Barbara [cph]
 Repository: CRAN
-Date/Publication: 2025-02-21 15:40:06 UTC
+Date/Publication: 2025-03-26 18:30:02 UTC
